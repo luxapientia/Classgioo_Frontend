@@ -156,7 +156,7 @@ export default function PostsSingle({
                             Edit
                           </p>
                         </DropdownItem> */}
-                    <DropdownItem>
+                    <DropdownItem  textValue="Delete">
                       <button className="" onClick={() => setToDelete(post.id)}>
                         <p className="flex items-center text-danger-500">
                           <Icon icon="bi:trash" className="w-4 h-4 mr-2" />
@@ -370,7 +370,7 @@ export default function PostsSingle({
                           user.role === "owner" ||
                           user.role === "teacher" ||
                           post.user.id === user.user._id ? (
-                            <DropdownItem>
+                            <DropdownItem textValue="Delete">
                               <button
                                 className=""
                                 onClick={() => setToDeleteComment(comment.id)}
